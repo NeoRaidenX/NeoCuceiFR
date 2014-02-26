@@ -15,13 +15,14 @@
 		2228971018BE88BA00EEB36A /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 2228970F18BE88BA00EEB36A /* AppDelegate.m */; };
 		2228971318BE88BA00EEB36A /* Main_iPhone.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2228971118BE88BA00EEB36A /* Main_iPhone.storyboard */; };
 		2228971618BE88BA00EEB36A /* Main_iPad.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2228971418BE88BA00EEB36A /* Main_iPad.storyboard */; };
-		2228971918BE88BA00EEB36A /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2228971818BE88BA00EEB36A /* ViewController.m */; };
+		2228971918BE88BA00EEB36A /* ViewController.mm in Sources */ = {isa = PBXBuildFile; fileRef = 2228971818BE88BA00EEB36A /* ViewController.mm */; };
 		2228971B18BE88BA00EEB36A /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2228971A18BE88BA00EEB36A /* Images.xcassets */; };
 		2228972218BE88BA00EEB36A /* XCTest.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2228972118BE88BA00EEB36A /* XCTest.framework */; };
 		2228972318BE88BA00EEB36A /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 222896FF18BE88B900EEB36A /* Foundation.framework */; };
 		2228972418BE88BA00EEB36A /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2228970318BE88BA00EEB36A /* UIKit.framework */; };
 		2228972C18BE88BA00EEB36A /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 2228972A18BE88BA00EEB36A /* InfoPlist.strings */; };
 		2228972E18BE88BA00EEB36A /* NeoCuceiFRTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 2228972D18BE88BA00EEB36A /* NeoCuceiFRTests.m */; };
+		223FC1FA18BE942D0090C91D /* opencv2.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 223FC1F918BE942D0090C91D /* opencv2.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -48,13 +49,14 @@
 		2228971218BE88BA00EEB36A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main_iPhone.storyboard; sourceTree = "<group>"; };
 		2228971518BE88BA00EEB36A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main_iPad.storyboard; sourceTree = "<group>"; };
 		2228971718BE88BA00EEB36A /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
-		2228971818BE88BA00EEB36A /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
+		2228971818BE88BA00EEB36A /* ViewController.mm */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.objcpp; path = ViewController.mm; sourceTree = "<group>"; };
 		2228971A18BE88BA00EEB36A /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		2228972018BE88BA00EEB36A /* NeoCuceiFRTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = NeoCuceiFRTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		2228972118BE88BA00EEB36A /* XCTest.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = XCTest.framework; path = Library/Frameworks/XCTest.framework; sourceTree = DEVELOPER_DIR; };
 		2228972918BE88BA00EEB36A /* NeoCuceiFRTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "NeoCuceiFRTests-Info.plist"; sourceTree = "<group>"; };
 		2228972B18BE88BA00EEB36A /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		2228972D18BE88BA00EEB36A /* NeoCuceiFRTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = NeoCuceiFRTests.m; sourceTree = "<group>"; };
+		223FC1F918BE942D0090C91D /* opencv2.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = opencv2.framework; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -62,6 +64,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				223FC1FA18BE942D0090C91D /* opencv2.framework in Frameworks */,
 				2228970218BE88BA00EEB36A /* CoreGraphics.framework in Frameworks */,
 				2228970418BE88BA00EEB36A /* UIKit.framework in Frameworks */,
 				2228970018BE88BA00EEB36A /* Foundation.framework in Frameworks */,
@@ -103,6 +106,7 @@
 		222896FE18BE88B900EEB36A /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				223FC1F918BE942D0090C91D /* opencv2.framework */,
 				222896FF18BE88B900EEB36A /* Foundation.framework */,
 				2228970118BE88BA00EEB36A /* CoreGraphics.framework */,
 				2228970318BE88BA00EEB36A /* UIKit.framework */,
@@ -119,7 +123,7 @@
 				2228971118BE88BA00EEB36A /* Main_iPhone.storyboard */,
 				2228971418BE88BA00EEB36A /* Main_iPad.storyboard */,
 				2228971718BE88BA00EEB36A /* ViewController.h */,
-				2228971818BE88BA00EEB36A /* ViewController.m */,
+				2228971818BE88BA00EEB36A /* ViewController.mm */,
 				2228971A18BE88BA00EEB36A /* Images.xcassets */,
 				2228970618BE88BA00EEB36A /* Supporting Files */,
 			);
@@ -253,7 +257,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				2228971918BE88BA00EEB36A /* ViewController.m in Sources */,
+				2228971918BE88BA00EEB36A /* ViewController.mm in Sources */,
 				2228971018BE88BA00EEB36A /* AppDelegate.m in Sources */,
 				2228970C18BE88BA00EEB36A /* main.m in Sources */,
 			);
@@ -392,6 +396,10 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					/Users/NeoRaidenX/Xcode/NeoCuceiFR,
+				);
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "NeoCuceiFR/NeoCuceiFR-Prefix.pch";
 				INFOPLIST_FILE = "NeoCuceiFR/NeoCuceiFR-Info.plist";
@@ -405,6 +413,10 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					/Users/NeoRaidenX/Xcode/NeoCuceiFR,
+				);
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "NeoCuceiFR/NeoCuceiFR-Prefix.pch";
 				INFOPLIST_FILE = "NeoCuceiFR/NeoCuceiFR-Info.plist";
@@ -474,6 +486,7 @@
 				2228973318BE88BA00EEB36A /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		2228973418BE88BA00EEB36A /* Build configuration list for PBXNativeTarget "NeoCuceiFRTests" */ = {
 			isa = XCConfigurationList;
@@ -482,6 +495,7 @@
 				2228973618BE88BA00EEB36A /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
