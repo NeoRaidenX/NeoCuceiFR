@@ -11,9 +11,12 @@
 
 using namespace cv;
 
-@interface ViewController : UIViewController{
+@interface ViewController : UIViewController<CvVideoCameraDelegate>{
     CvVideoCamera *videoCamera;
+    __weak IBOutlet UIImageView *imageView;
+    __weak IBOutlet UIButton *button;
 }
+- (IBAction)actionStart:(id)sender;
 
 @property (nonatomic, retain) CvVideoCamera *videoCamera;
 
