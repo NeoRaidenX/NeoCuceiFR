@@ -15,6 +15,8 @@ using namespace cv;
     CvVideoCamera *videoCamera;
     __weak IBOutlet UIImageView *imageView;
     __weak IBOutlet UIButton *button;
+    NSMutableString *inputString;
+    NSString *outputString;
 }
 - (IBAction)actionStart:(id)sender;
 

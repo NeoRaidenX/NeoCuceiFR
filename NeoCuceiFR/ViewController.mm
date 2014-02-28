@@ -23,6 +23,10 @@
     self.videoCamera = [[CvVideoCamera alloc] initWithParentView:imageView];
     self.videoCamera.delegate = self;
     NSString *resourcePath = [[[NSBundle mainBundle] resourcePath] stringByAppendingPathComponent:[NSString stringWithUTF8String:"haarcascade_frontalface_alt_tree.xml"]];
+    CvHaarClassifierCascade *haarCascade = (CvHaarClassifierCascade *)cvLoad([resourcePath UTF8String],0,0,0);
+    //This can load Haar detectors just by giving the file name. In this case it's working with frontfaceAltTree
+    inputString = [[NSMutableString alloc]init];
+    outputString = [NSString alloc];
     
     
 }
@@ -30,8 +34,9 @@
 #pragma mark - Protocol CvVideoCameraDelegate
 
 #ifdef __cplusplus
--(void)processImage:(cv::Mat &)image{
-    Mat image_copy;
+-(void)processImage:(Mat &)image{
+    Mat image_copy, equalizedImg;
+
     //Mat create a matrix with the numerical values for each of the points of the image.
     
     cvtColor(image, image_copy, CV_BGRA2GRAY);
@@ -40,6 +45,9 @@
      CV_BGRA2BGR - transformation within BGRA space
      image_copy - output image
      */
+    //equalizeHist(image_copy, equalizedImg);
+    //cvtColor(equalizedImg, image, CV_BGR2BGRA);
+    
     
 }
 #endif
@@ -48,12 +56,14 @@
 {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
+    //Accesing device Cam
     self.videoCamera = [[CvVideoCamera alloc] initWithParentView:imageView];
     self.videoCamera.defaultAVCaptureDevicePosition = AVCaptureDevicePositionFront;
     self.videoCamera.defaultAVCaptureSessionPreset = AVCaptureSessionPreset352x288;
     self.videoCamera.defaultAVCaptureVideoOrientation = AVCaptureVideoOrientationPortrait;
     self.videoCamera.defaultFPS = 30;
     self.videoCamera.grayscaleMode = NO;
+    //endAccessing
     
 }
 
