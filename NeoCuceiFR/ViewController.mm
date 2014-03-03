@@ -47,7 +47,7 @@
      */
     //equalizeHist(image_copy, equalizedImg);
     //cvtColor(equalizedImg, image, CV_BGR2BGRA);
-    //asdasd
+    
     
     
 }
